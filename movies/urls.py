@@ -1,12 +1,11 @@
 from django.urls import path
-from . import views
+from .views import index, detail
 
 
 app_name = 'movies'
 
-
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('<int:movie_id>', views.detail, name='movies_detail')
+    path('', index, name='index'),
+    path('<int:movie_id>', detail, name='detail')
 ]
 
